@@ -1,0 +1,24 @@
+- name: Provision
+  gather_facts: false
+  hosts: cluster
+  vars_files:
+    - ../vars/vault.yaml
+    - ../vars/defaults.yaml
+  roles:
+    - role: mucsi96.ansible_roles.new_ssh_user
+      vars:
+        private_key_file: "{{ inventory_dir }}/.ssh/id_ed25519"
+        ansible_user: root
+        ansible_ssh_pass: "{{ initial_password }}"
+        ansible_port: "{{ initial_port }}"
+
+    - role: mucsi96.ansible_roles.ssh_hardening
+      vars:
+        ansible_port: "{{ initial_port }}"
+        ansible_user: "{{ username }}"
+
+    - role: gather_facts
+      vars:
+        ansible_port: "{{ ssh_port }}"
+
+    - role: mucsi96.ansible_roles.update_packages
