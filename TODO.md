@@ -1,1 +1,0 @@
-- Fix Kubernetes in vscode
