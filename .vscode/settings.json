@@ -1,0 +1,8 @@
+{
+  "ansible.python.interpreterPath": "/usr/bin/python3",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "vs-kubernetes": {
+    "vs-kubernetes.kubeconfig": ".kube/config",
+    "vs-kubernetes.knownKubeconfigs": [".kube/config"]
+  }
+}
