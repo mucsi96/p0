@@ -36,7 +36,7 @@ RUN curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/s
     && ./get_helm.sh --version v3.11.1
 
 # Install cloudflared
-RUN wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && dpkg -i cloudflared-linux-amd64.deb
+RUN wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-$(dpkg --print-architecture).deb && dpkg -i cloudflared-linux-$(dpkg --print-architecture).deb
 
 ENV ANSIBLE_CONFIG=${WORKSPACE_HOME}/ansible.cfg
 ENV KUBECONFIG=${WORKSPACE_HOME}/.kube/config
