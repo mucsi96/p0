@@ -3,3 +3,4 @@
 .kube/
 ssh.sh
 lib/
+.DS_Store
