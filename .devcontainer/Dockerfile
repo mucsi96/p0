@@ -39,5 +39,5 @@ RUN curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/s
 RUN wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-$(dpkg --print-architecture).deb && dpkg -i cloudflared-linux-$(dpkg --print-architecture).deb
 
 ENV ANSIBLE_CONFIG=${WORKSPACE_HOME}/ansible.cfg
-ENV KUBECONFIG=${WORKSPACE_HOME}/.kube/config
+ENV KUBECONFIG=${USER_HOME}/.kube/ansible-config
 COPY .bashrc ${USER_HOME}

@@ -27,11 +27,7 @@
       vars:
         local_kube_config: "{{ inventory_dir }}/.kube/config"
 
-    - role: mucsi96.kubetools.pull_kube_config
-      vars:
-        local_kube_config: "{{ inventory_dir }}/.kube/config"
-
-    - role: mucsi96.kubetools.deploy_kubernetes_sso_portal
+    - role: mucsi96.kubetools.deploy_identity_provider
 
     - role: mucsi96.kubetools.deploy_cloudflare_tunnel
       vars:

@@ -2,7 +2,10 @@
   "ansible.python.interpreterPath": "/usr/bin/python3",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "vs-kubernetes": {
-    "vs-kubernetes.kubeconfig": ".kube/config",
-    "vs-kubernetes.knownKubeconfigs": [".kube/config"]
+    "vs-kubernetes.kubeconfig": "/home/vscode/.kube/admin-config",
+    "vs-kubernetes.knownKubeconfigs": [
+      ".kube/config",
+      "/home/vscode/.kube/admin-config"
+    ]
   }
 }

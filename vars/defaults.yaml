@@ -4,3 +4,5 @@ auth_middelware_namespace: authelia
 hostname: "{{ subdomain }}.{{ public_domainname }}"
 spring_admin_server_name: spring-boot-admin-server
 spring_admin_server_port: 9090
+k8s_admin_config_path: "~/.kube/admin-config"
+k8s_ansible_config_path: "~/.kube/ansible-config"

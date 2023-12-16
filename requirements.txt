@@ -1,5 +1,6 @@
-ansible == 8.1.0
-ansible-lint == 6.17.2
+ansible == 8.6.1
+ansible-lint == 6.22.0
 passlib == 1.7.4
-argon2-cffi == 21.3.0
-https://github.com/mucsi96/kubetools/releases/download/python-lib-27/kubetools-0.27.0-py3-none-any.whl
+argon2-cffi == 23.1.0
+kubernetes == 28.1.0
+https://github.com/mucsi96/kubetools/releases/download/python-lib-35/kubetools-0.35.0-py3-none-any.whl
